@@ -1,0 +1,80 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+.item-container {
+  background-color: $background-primary;
+  border-radius: 4px;
+  margin-top: $padding-large;
+  padding: $padding-large;
+
+  .item {
+    float: left;
+    width: 70%;
+
+    &--image {
+      width: 100%;
+
+      &--container {
+        width: 100%;
+      }
+    }
+
+    &--description {
+      font-size: 16px;
+
+      &--title {
+        font-size: 28px;
+        padding: $padding-large 0;
+      }
+
+      &--information {
+        color: $item-color-secondary;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+  .details {
+    float: right;
+    width: 30%;
+
+    &--condition {
+      font-size: $font-size-small;
+      padding-bottom: $padding-normal;
+      color: $item-color-secondary;
+    }
+
+    &--title {
+      color: $item-color-primary;
+      font-size: $font-size-large;
+      font-weight: 600;
+      padding-bottom: $padding-large;
+      white-space: normal;
+    }
+
+    &--price {
+      font-size: $font-size-extra-large;
+      padding-bottom: $padding-large;
+
+      &__decimals {
+        font-size: $font-size-large;
+        vertical-align: top;
+      }
+    }
+
+    &--buy {
+      background-color: $button-background-primary;
+      border: none;
+      border-radius: 4px;
+      color: $button-color-primary;
+      cursor: pointer;
+      font-size: $font-size-small;
+      padding: $padding-small;
+      width: 250px;
+    }
+  }
+
+  .clear {
+    clear: both;
+  }
+}

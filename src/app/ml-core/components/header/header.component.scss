@@ -6,21 +6,28 @@
   height: 60px;
   width: 100%;
 
-  &--logo {
-    &::before {
-      background: $meli-logo no-repeat;
-      content: "";
-      float: right;
-      height: 36px;
-      margin: 10px 15px;
-      width: 53px;
-    }
-  }
+  &--container {
+    margin: 0 auto;
+    width: 1024px;
 
-  &--search-bar {
-    float: right;
-    margin-right: 12%;
-    margin-top: 10px;
-    width: 70%;
+    &--logo {
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        background: $meli-logo no-repeat;
+        content: "";
+        float: right;
+        height: 36px;
+        margin: 10px 15px;
+        width: 53px;
+      }
+    }
+
+    &--search-bar {
+      float: right;
+      margin-top: 10px;
+      width: calc(100% - 83px);
+    }
   }
 }

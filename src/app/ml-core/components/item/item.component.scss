@@ -6,10 +6,6 @@
   display: block;
   padding: $padding-normal;
 
-  &:hover {
-    cursor: pointer;
-  }
-
   &--image {
     display: inline-block;
     padding-right: $padding-normal;
@@ -19,11 +15,15 @@
       border-radius: 4px;
       height: $result-image-size;
       width: $result-image-size;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
   &--information {
-    color: $item-color-primary;
+    color: $item-color-secondary;
     display: inline-block;
     padding-top: $padding-normal;
     vertical-align: top;
@@ -36,6 +36,7 @@
     }
 
     &--price {
+      color: $item-color-primary;
       font-size: $font-size-large;
     }
 
@@ -50,11 +51,15 @@
     &--title {
       font-size: $font-size-normal;
       padding-top: $padding-large;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
   &--state {
-    color: $item-color-secondary;
+    color: $item-color-tertiary;
     display: inline-block;
     font-size: $font-size-tiny;
     padding-top: $padding-normal;

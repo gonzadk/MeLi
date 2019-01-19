@@ -1,0 +1,34 @@
+<article class="item-container" *ngIf="item">
+  <article class="item">
+    <section class="item--image">
+      <img class="item--image--container" [src]="item.picture" alt="">
+    </section>
+
+    <section class="item--description">
+      <h2 class="item--description--title"> {{ descriptionTitle }} </h2>
+      <p class="item--description--information"> {{ item.description }} </p>
+    </section>
+  </article>
+
+  <aside class="details">
+    <div class="details--condition">
+      {{ itemCondition }}
+    </div>
+
+    <div class="details--title">
+      {{ item.title }}
+    </div>
+
+    <div class="details--price">
+      {{ price }}
+      <sup class="details--price__decimals"> {{ decimals }} </sup>
+    </div>
+
+    <button class="details--buy">Comprar</button>
+
+  </aside>
+
+  <div class="clear"></div>
+</article>
+
+<uc-loading [isLoading]="isLoading"></uc-loading>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Item, SearchResults } from '../../models/search-results.model';
+import { ItemResults, SearchResults } from '../../models/search-results.model';
 
 @Injectable()
 export class SearchService {
@@ -10,8 +10,8 @@ export class SearchService {
 
   constructor(private httpClient: HttpClient) {}
 
-  searchItemById(id: string): Observable<Item> {
-    return this.httpClient.get<Item>(`${this.searchItemByIdRoute}${id}`);
+  searchItemById(id: string): Observable<ItemResults> {
+    return this.httpClient.get<ItemResults>(`${this.searchItemByIdRoute}${id}`);
   }
 
   searchItemsByQuery(value: string): Observable<SearchResults> {

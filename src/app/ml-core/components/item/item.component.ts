@@ -9,11 +9,11 @@ import { Item } from '../../models/search-results.model';
 export class ItemComponent {
   @Input() item: Item;
 
-  @Output() click: EventEmitter<void> = new EventEmitter<void>();
+  @Output() itemClick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
 
   onClick(): void {
-    this.click.emit();
+    this.itemClick.emit();
   }
 }

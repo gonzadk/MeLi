@@ -3,9 +3,15 @@
 <article class="results-container">
   <section *ngFor="let item of searchResults.items; let i = index">
     <ml-item [item]="item"
-             (click)="onClick(item)">
+             (itemClick)="onClick(item)">
     </ml-item>
 
     <div class="separator" *ngIf="i !== searchResults.items.length - 1"></div>
   </section>
+
+  <section class="no-results" *ngIf="!isLoading && searchResults.items.length === 0">
+    No se encontraron resultados para la busqueda ingresada
+  </section>
 </article>
+
+<uc-loading [isLoading]="isLoading"></uc-loading>

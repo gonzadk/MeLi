@@ -4,34 +4,40 @@ export interface SearchResults {
   items: Item[]
 }
 
-export interface ProductResutls {
+export interface ItemResults {
   author: Author;
-  items: Item[]
+  item: Item
 }
 
 export interface Author {
-  name: string;
   lastname: string;
+  name: string;
 }
 
 export interface Item {
-  id: string;
-  title: string;
-  picture: string;
-  free_shipping: boolean;
-  state: string;
   condition: ItemCondition;
-  price: ItemPrice;
   description?: string;
+  free_shipping: boolean;
+  id: string;
+  picture: string;
+  sold_quantity?: number;
+  state: string;
+  title: string;
+  price: ItemPrice;
 }
 
 export interface ItemPrice {
-  currency: string,
   amount: number,
+  currency: string,
   decimals: number
 }
 
 export enum ItemCondition {
   NEW = 'new',
   USED = 'used'
+}
+
+export enum ItemConditionTranslated {
+  NEW = 'Nuevo',
+  USED = 'Usado'
 }
