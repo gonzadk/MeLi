@@ -1,0 +1,7 @@
+<uc-breadcrumb [items]="searchResults.categories"></uc-breadcrumb>
+
+<article class="results-container">
+  <ml-item *ngFor="let item of searchResults.items"
+           [item]="item">
+  </ml-item>
+</article>

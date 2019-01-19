@@ -1,0 +1,9 @@
+<header role="banner" class="header">
+
+  <uc-search-bar class="header--search-bar"
+                 (search)="onSearch($event)"
+                 [inputValue]="inputValue"
+                 [placeholder]="placeholder"></uc-search-bar>
+
+  <div class="header--logo" routerLink="/"></div>
+</header>

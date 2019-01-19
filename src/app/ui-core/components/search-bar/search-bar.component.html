@@ -1,0 +1,17 @@
+<div class="search-bar">
+  <form role="search">
+
+    <input type="text"
+           class="search-bar--input"
+           [(ngModel)]="inputValue"
+           [ngModelOptions]="{standalone: true}"
+           [placeholder]="placeholder">
+
+    <button type="submit"
+            class="search-bar--button"
+            (click)="onSubmit()">
+      <i class="search-bar--button--icon"></i>
+    </button>
+
+  </form>
+</div>

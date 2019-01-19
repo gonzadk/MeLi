@@ -1,0 +1,13 @@
+<a class="item" (click)="onClick()">
+  <div class="item--image">
+    <img class="item--image__container" [src]="item.picture" alt="">
+  </div>
+
+  <div class="item--information">
+    <span class="item--information--price"> {{ item.price.currency + item.price.amount }}</span>
+    <i *ngIf="item.free_shipping" class="item--shipping"></i>
+
+    <p class="item--information--title">{{ item.title }}</p>
+    <p class="item--information--city"> {{ item.city  }} </p>
+  </div>
+</a>

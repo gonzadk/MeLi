@@ -1,0 +1,19 @@
+@import '../../../styles/colors';
+
+.breadcrumb {
+  padding: 2px 16px;
+
+  &--item {
+    display: inline-block;
+    padding-left: 2px;
+    color: $breadcrumb-color-primary;
+
+    &:not(:last-child) {
+      color: $breadcrumb-color-secondary;
+
+      &::after {
+        content: ">";
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import 'styles/colors';
+
+.main-container {
+  background-color: $background-secondary;
+
+  .router-container {
+    margin: 0 auto;
+    max-width: 1024px;
+    height: calc(100vh - 60px);
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../../styles/colors';
+@import '../../../styles/images';
+@import '../../../styles/variables';
+
+.search-bar {
+  &--input {
+    border: 0 rgba(0,0,0,.2);
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: $input-font-color;
+    font-size: 18px;
+    height: $search-bar-height;
+    outline: none;
+    padding-left: 12px;
+    width: calc(100% - 40px);
+
+    &::placeholder {
+      color: $input-font-color-secondary;
+    }
+  }
+
+  &--button {
+    background-color: $background-secondary;
+    border: none;
+    cursor: pointer;
+    float: right;
+    height: $search-bar-height;
+    outline: none;
+    width: 40px;
+
+    &--icon {
+      background: $search-icon no-repeat;
+      display: block;
+      height: 18px;
+      margin-left: 5px;
+    }
+  }
+}
