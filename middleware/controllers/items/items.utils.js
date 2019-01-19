@@ -16,6 +16,7 @@ export function generateGenericItem(item, currencies) {
     picture: item.thumbnail,
     condition: item.condition,
     free_shipping: _.get(item, 'shipping.free_shipping', false),
+    state: _.get(item, 'seller_address.state.name'), // Added since it's necessary to show the city
     price: {
       currency: currency.symbol,
       amount: item.price,
