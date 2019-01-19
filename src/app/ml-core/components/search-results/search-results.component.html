@@ -1,7 +1,11 @@
 <uc-breadcrumb [items]="searchResults.categories"></uc-breadcrumb>
 
 <article class="results-container">
-  <ml-item *ngFor="let item of searchResults.items"
-           [item]="item">
-  </ml-item>
+  <section *ngFor="let item of searchResults.items; let i = index">
+    <ml-item [item]="item"
+             (click)="onClick(item)">
+    </ml-item>
+
+    <div class="separator" *ngIf="i !== searchResults.items.length - 1"></div>
+  </section>
 </article>

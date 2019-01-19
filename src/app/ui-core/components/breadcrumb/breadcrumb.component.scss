@@ -1,12 +1,14 @@
 @import '../../../styles/colors';
+@import '../../../styles/variables';
 
 .breadcrumb {
-  padding: 2px 16px;
+  padding: $padding-normal 0;
 
   &--item {
-    display: inline-block;
-    padding-left: 2px;
     color: $breadcrumb-color-primary;
+    display: inline-block;
+    font-size: $font-size-small;
+    padding-left: 4px;
 
     &:not(:last-child) {
       color: $breadcrumb-color-secondary;

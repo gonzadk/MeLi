@@ -4,10 +4,11 @@
   </div>
 
   <div class="item--information">
-    <span class="item--information--price"> {{ item.price.currency + item.price.amount }}</span>
-    <i *ngIf="item.free_shipping" class="item--shipping"></i>
+    <span class="item--information--price"> {{ item.price.amount | currency: item.price.currency }}</span>
+    <i *ngIf="item.free_shipping" class="item--information--shipping"></i>
 
     <p class="item--information--title">{{ item.title }}</p>
-    <p class="item--information--city"> {{ item.city  }} </p>
   </div>
+
+  <p class="item--state">{{ item.state }}</p>
 </a>

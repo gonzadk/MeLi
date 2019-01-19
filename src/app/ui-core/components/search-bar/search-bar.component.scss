@@ -8,10 +8,10 @@
     border-radius: 2px;
     box-sizing: border-box;
     color: $input-font-color;
-    font-size: 18px;
+    font-size: $font-size-normal;
     height: $search-bar-height;
     outline: none;
-    padding-left: 12px;
+    padding-left: $padding-small;
     width: calc(100% - 40px);
 
     &::placeholder {

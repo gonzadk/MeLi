@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Item } from '../../models/search-results.model';
 
 @Component({
@@ -9,5 +9,11 @@ import { Item } from '../../models/search-results.model';
 export class ItemComponent {
   @Input() item: Item;
 
+  @Output() click: EventEmitter<void> = new EventEmitter<void>();
+
   constructor() {}
+
+  onClick(): void {
+    this.click.emit();
+  }
 }

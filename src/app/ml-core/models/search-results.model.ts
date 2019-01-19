@@ -4,6 +4,11 @@ export interface SearchResults {
   items: Item[]
 }
 
+export interface ProductResutls {
+  author: Author;
+  items: Item[]
+}
+
 export interface Author {
   name: string;
   lastname: string;
@@ -13,9 +18,11 @@ export interface Item {
   id: string;
   title: string;
   picture: string;
-  condition: ItemCondition;
   free_shipping: boolean;
+  state: string;
+  condition: ItemCondition;
   price: ItemPrice;
+  description?: string;
 }
 
 export interface ItemPrice {

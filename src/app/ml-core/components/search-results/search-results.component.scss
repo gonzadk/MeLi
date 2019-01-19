@@ -1,6 +1,13 @@
 @import '../../../styles/colors';
 
-.search-container {
-  width: 100%;
-  background-color: $background-primary;
+.results-container {
+  background-color: $white;
+  border-radius: 2px;
+
+  .separator {
+    background-color: $separator-background;
+    width: 95%;
+    margin: 0 auto;
+    height: 1px;
+  }
 }

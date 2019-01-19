@@ -1,0 +1,63 @@
+@import '../../../styles/colors';
+@import '../../../styles/images';
+@import '../../../styles/variables';
+
+.item {
+  display: block;
+  padding: $padding-normal;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--image {
+    display: inline-block;
+    padding-right: $padding-normal;
+    width: $result-image-size;
+
+    &__container {
+      border-radius: 4px;
+      height: $result-image-size;
+      width: $result-image-size;
+    }
+  }
+
+  &--information {
+    color: $item-color-primary;
+    display: inline-block;
+    padding-top: $padding-normal;
+    vertical-align: top;
+    width: calc(100% - 400px);
+    @media screen and (max-width: $medium-break) {
+      width: calc(100% - 350px);
+    }
+    @media screen and (max-width: $small-break) {
+      width: calc(100% - 300px);
+    }
+
+    &--price {
+      font-size: $font-size-large;
+    }
+
+    &--shipping {
+      background: $shipping-icon no-repeat;
+      display: inline-block;
+      height: 18px;
+      margin-left: 10px;
+      width: 18px;
+    }
+
+    &--title {
+      font-size: $font-size-normal;
+      padding-top: $padding-large;
+    }
+  }
+
+  &--state {
+    color: $item-color-secondary;
+    display: inline-block;
+    font-size: $font-size-tiny;
+    padding-top: $padding-normal;
+    vertical-align: top;
+  }
+}

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SearchService } from '../../services/search/search.service';
-import { ActivatedRoute, Params } from '@angular/router';
-import { SearchResults } from '../../models/search-results.model';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Item, SearchResults } from '../../models/search-results.model';
 
 @Component({
   selector: 'ml-search-results',
@@ -13,13 +13,18 @@ export class SearchResultsComponent implements OnInit {
 
   searchResults: SearchResults = <SearchResults>{};
 
-  constructor(private searchService: SearchService,
-              private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute,
+              private router: Router,
+              private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe(
       (params: Params) => this.searchItemsByQuery(params)
     );
+  }
+
+  onClick(item: Item): void {
+    this.router.navigate(['items', item.id]);
   }
 
   private searchItemsByQuery(params: Params): void {
