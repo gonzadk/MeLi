@@ -55,7 +55,7 @@ function parseResults(searchResponse, descriptionResponse, currencies) {
 
   return {
     author: AUTHOR,
-    item,
+    item
   };
 }
 
@@ -70,7 +70,7 @@ function getItem(searchResponse, descriptionResponse, currencies) {
   const item = generateGenericItem(searchResponse, currencies);
 
   return _.defaults(item, {
-    sold_quantity: item.sold_quantity,
+    sold_quantity: searchResponse.sold_quantity,
     description: descriptionResponse.plain_text
   });
 }
