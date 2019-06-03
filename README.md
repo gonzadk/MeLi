@@ -9,6 +9,6 @@ First thing to know is that this repository has two branches.
 
 ## Installation
 Doesn't matter the branch you are in, these three steps are the only ones needed
-1- git checkout <some-branch>
-2- npm i
-3- npm run serve
+ - git checkout <some-branch>
+ - npm i
+ - npm run serve
